@@ -26,19 +26,6 @@ public class UserDtoToUserConverter implements Converter<UserDto, User> {
                 .firstName(userDto.getFirstName())
                 .lastName(userDto.getLastName())
                 .active((short) 0)
-                .authorities(buildAuthorities())
                 .build();
-    }
-
-    private List<Authority> buildAuthorities(){
-
-        List<Authority> authorities = new ArrayList<>();
-
-        authorities.add(Authority.builder()
-                .id(3L)
-                .description(AuthorityType.MEMBER.description())
-                .build());
-
-        return authorities;
     }
 }
