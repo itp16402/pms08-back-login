@@ -17,16 +17,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         "spring.jmx.default-domain=RegistrationControllerTest"})
 public class RegistrationControllerTest extends BasicWiremockTest {
 
-    @Ignore
+//    @Ignore
     @Test
     public void register() throws Exception {
 
         UserDto userDto = UserDto.builder()
-                .username("apatsimas")
+                .username("ogghgh")
                 .password("p@t$!9!4")
-                .firstName("ΑΝΤΡΕΑΣ")
-                .lastName("ΠΑΤΣΙΜΑΣ")
-                .email("andreas-patsim@hotmail.com")
+                .firstName("gwe")
+                .lastName("3g3g")
+                .email("a3g3r@hotmail.com")
                 .build();
 
         this.mockMvc.perform(
