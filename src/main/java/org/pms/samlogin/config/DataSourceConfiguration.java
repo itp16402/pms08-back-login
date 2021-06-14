@@ -1,5 +1,6 @@
 package org.pms.samlogin.config;
 
+import com.google.common.base.Preconditions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -53,7 +54,7 @@ public class DataSourceConfiguration {
         DriverManagerDataSource dataSource
                 = new DriverManagerDataSource();
         dataSource.setDriverClassName(
-                Objects.requireNonNull(env.getProperty("spring.datasource.driverClassName")));
+                Preconditions.checkNotNull(env.getProperty("spring.datasource.driverClassName")));
         dataSource.setUrl(env.getProperty("spring.datasource.url"));
         dataSource.setUsername(env.getProperty("spring.datasource.username"));
         dataSource.setPassword(env.getProperty("spring.datasource.password"));
